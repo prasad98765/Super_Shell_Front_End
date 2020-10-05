@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <title> Super Shell</title>
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+      <!-- <link rel="apple-touch-icon" href="../src/Images/1.jpg" /> -->
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script> -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+    <!-- <script src="../src/main.js"></script> -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> -->
+        <!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script> -->
+<!-- MDB core JavaScript -->
+<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script> -->
+
+
+<script>
+$(function() {
+var selectedClass = "";
+$(".filter").click(function(){
+selectedClass = $(this).attr("data-rel");
+$("#gallery").fadeTo(100, 0.1);
+$("#gallery div").not("."+selectedClass).fadeOut().removeClass('animation');
+setTimeout(function() {
+$("."+selectedClass).fadeIn().addClass('animation');
+$("#gallery").fadeTo(300, 1);
+}, 300);
+});
+});
+</script>
+  <script>
+    $(document).ready(function(){
+      //------------ Check passwords similarity --------------
+      $('#briefId,#pinId,#cityId,#yearId,#adderssId,#firmId,#contactId,#emailId,#lastNameId,#fisrtNameId').on('keyup', function () {
+        if ($('#briefId').val() != ''&& 
+        $('#cityId').val() != '' && 
+        $('#yearId').val() != '' && 
+        $('#adderssId').val() != ""  && 
+        $('#firmId').val() != ""  && 
+        $('#contactId').val() != ""  && 
+        $('#emailId').val() != ""  && 
+        $('#emailId').val() != ""  && 
+        $('#lastNameId').val() != ""  && 
+        $('#fisrtNameId').val() !=  undefined   ) {
+          $('.myCpwdClass').addClass('is-valid');
+          $('.myCpwdClass').removeClass('is-invalid');
+          $("#submitBtn").attr("disabled",false);
+          $('#submitBtn').addClass('btn-primary').removeClass('btn-secondary');
+       
+        } else {
+        
+          $('.myCpwdClass').removeClass('is-valid');
+          $('.myCpwdClass').addClass('is-invalid');
+          $("#submitBtn").attr("disabled",true);
+          $('#submitBtn').addClass('btn-secondary').removeClass('btn-primary');
+        }
+      });
+
+
+
+     
+
+
+
+  
+      // ----------------- Validate on submit -----------------
+      let currForm1 = document.getElementById('myForm1');
+      currForm1.addEventListener('submit', function(event) {
+        if (currForm1.checkValidity() === false) {
+         
+        }
+        else {
+          $("#submitBtn").attr("disabled",false);
+          currForm1.classList.add('was-validated');
+        }
+      }, false);
+
+      // ----------------- Validate on input -----------------
+      currForm1.querySelectorAll('.form-control').forEach(input => {
+        input.addEventListener(('input'), () => {
+          if (input.checkValidity()) {
+            input.classList.remove('is-invalid');
+            input.classList.add('is-valid');
+          } else {
+            input.classList.remove('is-valid');
+            input.classList.add('is-invalid');
+          }
+        });
+      });
+      // ------------------------------------------------------
+    });
+  </script>
+
+  <script>
+    $(document).ready(function(){
+   $('#Contactmessage , #Contactsubject , #Contactemail , #ContactfullName').on('keyup', function () {
+        if ($('#Contactmessage').val() != '' && $('#Contactsubject').val() != '' && $('#Contactemail').val() != '' && $('#ContactfullName').val() != '' ) {
+          $("#submitBtnContact").attr("enable",false);
+          $('#submitBtnContact').addClass('btn-primary').removeClass('btn-secondary');
+       
+        } else {
+        
+          $("#submitBtnContact").attr("enable",true);
+          $('#submitBtnContact').addClass('btn-secondary').removeClass('btn-primary');
+        }
+      });
+    })
+  
+  
+  </script>
+
+  <script>
+  // $('#submitBtnabc').on('click', function() {
+  // new Noty({
+  // 	type: 'success', //alert (default), success, error, warning, info - ClassName generator uses this value → noty_type__${type}
+  //   layout: 'topRight', //top, topLeft, topCenter, topRight (default), center, centerLeft, centerRight, bottom, bottomLeft, bottomCenter, bottomRight - ClassName generator uses this value → noty_layout__${layout}
+  //   theme: 'bootstrap-v4', //relax, mint (default), metroui - ClassName generator uses this value → noty_theme__${theme}
+  //   text: 'My beautiful snackbar', //This string can contain HTML too. But be careful and don't pass user inputs to this parameter.
+  //   //timeout: 5000, // false (default), 1000, 3000, 3500, etc. Delay for closing event in milliseconds (ms). Set 'false' for sticky notifications.
+  //   progressBar: true, //Default, progress before fade out is displayed
+  //   //closeWith: 'click' //default; alternative: button
+    
+  //   /*animation: {
+  //           open: 'animated bounceInRight', // Animate.css class names
+  //           close: 'animated bounceOutRight' // Animate.css class names
+  //       }*/
+  // }).show();
+
+  $('.toast').toast('show');
+
+  </script>
+  </body>
+</html>

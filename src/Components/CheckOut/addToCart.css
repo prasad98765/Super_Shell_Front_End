@@ -1,0 +1,34 @@
+.cart {
+    font-size: 140%;
+    margin-top: -9%;
+    padding: 10vmin 5vmin 12vmin 10vmin;
+    box-shadow: 0px 35px 42px black;
+    font-family: var(--Rubik);
+    border-radius: 2.3%;
+    font-weight: bold;
+    margin-top: 8%;
+    margin-bottom: 7%;
+    margin-left: 9%;
+    margin-right: 9%;
+}
+.cart-image1 {
+    display: flex;
+    flex-direction: row;
+    padding-left: 7%;
+    padding-top: 5%;
+
+}
+
+.text {
+    padding-left: 1%;
+    margin-left: 1%;
+    width: 10%;
+}
+
+.plus {
+    margin-left: 2.5%;
+    /* border-radius: 100%; */
+    width: 10%;
+    border: 4px solid grey;
+    background-color: whitesmoke;
+}

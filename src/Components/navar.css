@@ -1,0 +1,57 @@
+.nav-link{
+    /* background: rgb(233, 108, 108); */
+    font-weight: bold;
+    font-size: 100%;
+}
+.navbar-brand{
+    font-style: oblique;
+    font-weight: bold;
+    font-size: 200%;
+}
+.dropdown-menu{
+    margin-left: -300%;
+    margin-right: -300%;
+    /* width: 500%; */
+}
+
+/* .dropdown .dropdown-menu{
+    width: 200%;
+
+}
+.dropdown .dropdown-menu .dropdown-item {
+    background-color: sienna;
+    color: #fff;
+    margin-bottom: -5%;
+    font-weight: bold;
+    font-size: 100%;
+    margin-top: -5%;
+    padding: 10% 3%;
+} */
+.dropdown .dropdown-menu :hover {
+/* background-color: red; */
+background-color: rgb(134, 11, 11);
+}
+
+
+/* .navbar-nav {
+    text-align: center;
+} */
+
+
+.w-100{
+    height: 100%;
+}
+
+.dropdown:hover .dropdown-menu {display: block;}
+
+/* @media only screen and (max-width : 767px){
+    .navbar-nav.ml-auto{
+        background: rgba(233, 224, 224, 0.5);
+    }
+    .navbar-toggler{
+        padding: 1px 5px;
+        font-size: 15px;
+        line-height: 0.3;
+        background: #fff;
+    }
+} */

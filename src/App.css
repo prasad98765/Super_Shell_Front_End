@@ -1,0 +1,19 @@
+td {
+    font-size: 100%;
+}
+.a {
+    color: #000;
+    background-color: silver;
+}
+.a :hover{
+    background-color: transparent;
+}
+table, th, td {
+    border: -1px solid black;
+    border-collapse: collapse;
+  }
+
+ .B{
+     color: #fff;
+     background-color: brown;
+ } 
